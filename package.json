@@ -1,0 +1,30 @@
+{
+  "name": "can-control-modifier",
+  "version": "0.0.1",
+  "description": "can/control/modifier plugin for canjs",
+  "main": "dist/steal/modifier.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/canjs/can-control-modifier.git"
+  },
+  "keywords": [
+    "can",
+    "canjs",
+    "plugin"
+  ],
+  "author": "Bitovi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/canjs/can-control-modifier/issues"
+  },
+  "homepage": "https://github.com/canjs/can-control-modifier#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "steal": "^0.9.3",
+    "steal-qunit": "0.0.4",
+    "steal-tools": "^0.9.4"
+  }
+}

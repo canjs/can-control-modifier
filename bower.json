@@ -1,0 +1,23 @@
+{
+  "name": "can-control-modifier",
+  "version": "0.0.1",
+  "authors": [
+    "Bitovi"
+  ],
+  "description": "can/control/modifier plugin for canjs",
+  "main": "dist/steal/modifier.js",
+  "keywords": [
+    "can",
+    "canjs",
+    "can-plugin"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/canjs/can-control-modifier",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
