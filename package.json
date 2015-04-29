@@ -34,7 +34,7 @@
     "steal-tools": "^0.9.4"
   },
   "system": {
-    "main": ["modifier", "key/key"],
+    "main": "main",
     "directories": {
       "lib": "src"
     }
