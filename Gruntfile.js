@@ -1,38 +1,20 @@
 module.exports = function(grunt) {
 
+    grunt.loadNpmTasks('steal-tools');
+
     grunt.initConfig({
         "steal-export": {
-            transpile: {
+            modifier: {
                 system: {
-                    main: "src/modifier",
-                    config: "package.json!npm"
-                },
-                options: {
-                    debug: true
+                    config: "package.json!npm",
                 },
                 outputs: {
-                    amd: {
-                        graphs: ["src/modifier"],
-                        format: "amd",
-                        ignore: ['can/util', 'can/control', 'can/util/function']
-                    },
-                    cjs: {
-                        graphs: ["src/modifier"],
-                        format: "cjs",
-                        ignore: ['can/util', 'can/control', 'can/util/function']
-                    },
-                    global: {
-                        graphs: ["src/modifier"],
-                        format: "global",
-                        ignore: ['can/util', 'can/control', 'can/util/function']
-                    }
+                    "+cjs": {},
+                    "+amd": {},
+                    "+global-js": {}
                 }
             }
         }
     });
-    grunt.loadNpmTasks('steal-tools');
-
-    // Default task(s).
-    grunt.registerTask('default', ['steal-export']);
-
+    grunt.registerTask('build', ['steal-export']);
 };

@@ -2,9 +2,10 @@
   "name": "can-control-modifier",
   "version": "0.0.1",
   "description": "can/control/modifier plugin for canjs",
-  "main": "dist/steal/modifier.js",
+  "main": "dist/cjs/modifier.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt test --stack",
+    "prepublish": "./node_modules/.bin/grunt build"
   },
   "repository": {
     "type": "git",
@@ -21,10 +22,21 @@
     "url": "https://github.com/canjs/can-control-modifier/issues"
   },
   "homepage": "https://github.com/canjs/can-control-modifier#readme",
+  "dependencies": {
+    "can": "^2.2.5"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "jquery": "^2.1.4",
     "steal": "^0.9.3",
     "steal-qunit": "0.0.4",
     "steal-tools": "^0.9.4"
+  },
+  "system": {
+    "main": ["modifier", "key/key"],
+    "directories": {
+      "lib": "src"
+    }
   }
 }
