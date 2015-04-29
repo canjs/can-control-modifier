@@ -1,1 +1,2 @@
-steal("./modifier", "./key/key");
+import "./modifier";
+import "./key/key";

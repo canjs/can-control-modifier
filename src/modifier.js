@@ -4,54 +4,55 @@ import 'can/control/control';
 import 'can/util/function/function';
 
 // Hang on to original action
-var originalSetup = can.Control.setup,
-    processors = can.Control.processors,
-    modifier = {
-        delim: ':',
-        hasModifier: function(name) {
-            return name.indexOf(modifier.delim) !== -1;
-        },
-        modify: function(name, fn, options) {
-            var parts = name.match(/([\w]+)\((.+)\)/),
-                mod, args;
-            if (parts) {
-                mod = can.getObject(parts[1], [
+var originalSetup = can.Control.setup;
+var processors = can.Control.processors;
+
+var modifier = {
+    delim: ':',
+    hasModifier: function(name) {
+        return name.indexOf(modifier.delim) !== -1;
+    },
+    modify: function(name, fn, options) {
+        var parts = name.match(/([\w]+)\((.+)\)/),
+            mod, args;
+        if (parts) {
+            mod = can.getObject(parts[1], [
+                options || {},
+                can,
+                window
+            ]);
+            args = can.sub(parts[2], [
                     options || {},
                     can,
                     window
-                ]);
-                args = can.sub(parts[2], [
-                        options || {},
-                        can,
-                        window
-                    ])
-                    .split(',');
-                if (mod) {
-                    args.unshift(fn);
-                    fn = mod.apply(null, args);
-                }
+                ])
+                .split(',');
+            if (mod) {
+                args.unshift(fn);
+                fn = mod.apply(null, args);
             }
-            return fn;
-        },
-        addProcessor: function(event, mod) {
-            var processorName = [
-                event,
-                mod
-            ].join(modifier.delim);
-            processors[processorName] = function(el, nil, selector, methodName, control) {
-                var callback = modifier.modify(mod, can.Control._shifter(control, methodName), control.options);
-                control[event] = callback;
-                if (!selector) {
-                    selector = can.trim(selector);
-                }
-                can.delegate.call(el, selector, event, callback);
-                return function() {
-                    can.undelegate.call(el, selector, event, callback);
-                };
-            };
         }
-    };
-// Redefine _isAction to handle new syntax
+        return fn;
+    },
+    addProcessor: function(event, mod) {
+        var processorName = [
+            event,
+            mod
+        ].join(modifier.delim);
+        processors[processorName] = function(el, nil, selector, methodName, control) {
+            var callback = modifier.modify(mod, can.Control._shifter(control, methodName), control.options);
+            control[event] = callback;
+            if (!selector) {
+                selector = can.trim(selector);
+            }
+            can.delegate.call(el, selector, event, callback);
+            return function() {
+                can.undelegate.call(el, selector, event, callback);
+            };
+        };
+    }
+};
+
 can.extend(can.Control, {
     modifier: modifier,
     setup: function(el, options) {

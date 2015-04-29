@@ -5,7 +5,7 @@
     "Bitovi"
   ],
   "description": "can/control/modifier plugin for canjs",
-  "main": "dist/steal/modifier.js",
+  "main": "dist/amd/modifier.js",
   "keywords": [
     "can",
     "canjs",

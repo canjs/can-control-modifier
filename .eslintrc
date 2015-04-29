@@ -31,11 +31,13 @@
     "node": true,         // Node.js global variables and Node.js-specific rules.
     "amd": true,          // defines require() and define() as global variables as per the amd spec.
     "mocha": false,       // adds all of the Mocha testing global variables.
-    "jasmine": true,      // adds all of the Jasmine testing global variables for version 1.3 and 2.0.
-    "phantomjs": true,    // phantomjs global variables.
-    "jquery": true,       // jquery global variables.
+    "jasmine": false,      // adds all of the Jasmine testing global variables for version 1.3 and 2.0.
+    "phantomjs": false,    // phantomjs global variables.
+    "jquery": false,       // jquery global variables.
     "prototypejs": false, // prototypejs global variables.
     "shelljs": false,     // shelljs global variables.
+    "meteor": false,
+    "es6": true
   },
 
   "globals": {
@@ -83,7 +85,7 @@
 
     "block-scoped-var": 0,      // treat var statements as if they were block scoped (off by default)
     "complexity": 1,            // specify the maximum cyclomatic complexity allowed in a program (off by default)
-    "consistent-return": 0,     // require return statements to either always or never specify values
+    "consistent-return": 1,     // require return statements to either always or never specify values
     "curly": 1,                 // specify curly brace conventions for all control statements
     "default-case": 0,          // require default case in switch statements (off by default)
     "dot-notation": 0,          // encourages use of dot notation whenever possible
@@ -147,7 +149,7 @@
     "no-undef": 1,                    // disallow use of undeclared variables unless mentioned in a /*global */ block
     "no-undef-init": 0,               // disallow use of undefined when initializing variables
     "no-undefined": 0,                // disallow use of undefined variable (off by default)
-    "no-unused-vars": 0,              // disallow declaration of variables that are not used in the code
+    "no-unused-vars": 1,              // disallow declaration of variables that are not used in the code
     "no-use-before-define": 0,        // disallow use of variables before they are defined
 
 
