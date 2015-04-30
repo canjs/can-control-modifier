@@ -60,27 +60,15 @@
 		orig: global.System
 	};
 })({},window)
-/*can-control-modifier@0.0.1#modifier*/
-define('can-control-modifier/modifier', [
-    'can',
-    'can/util/util',
-    'can/control/control',
-    'can/util/function/function'
-], function ($__0, $__2, $__3, $__4) {
+/*can-control-modifier@0.0.3#modifier*/
+define('can-control-modifier/modifier', ['can'], function ($__0) {
     'use strict';
     if (!$__0 || !$__0.__esModule)
         $__0 = { default: $__0 };
-    if (!$__2 || !$__2.__esModule)
-        $__2 = { default: $__2 };
-    if (!$__3 || !$__3.__esModule)
-        $__3 = { default: $__3 };
-    if (!$__4 || !$__4.__esModule)
-        $__4 = { default: $__4 };
     var can = $__0.default;
-    $__2;
-    $__3;
-    $__4;
-    var originalSetup = can.Control.setup, processors = can.Control.processors, modifier = {
+    var originalSetup = can.Control.setup;
+    var processors = can.Control.processors;
+    var modifier = {
             delim: ':',
             hasModifier: function (name) {
                 return name.indexOf(modifier.delim) !== -1;
@@ -148,7 +136,7 @@ define('can-control-modifier/modifier', [
         __esModule: true
     };
 });
-/*can-control-modifier@0.0.1#key/key*/
+/*can-control-modifier@0.0.3#key/key*/
 define('can-control-modifier/key/key', [
     'can',
     'can-control-modifier/modifier'
@@ -413,7 +401,7 @@ define('can-control-modifier/key/key', [
     });
     return {};
 });
-/*can-control-modifier@0.0.1#main*/
+/*can-control-modifier@0.0.3#main*/
 define('can-control-modifier', [
     'can-control-modifier/modifier',
     'can-control-modifier/key/key'

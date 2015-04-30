@@ -1,4 +1,4 @@
-/*can-control-modifier@0.0.1#main*/
+/*can-control-modifier@0.0.3#main*/
 'use strict';
 var $__modifier__, $__key_47_key__;
 $__modifier__ = require('./modifier.js'), $__modifier__ && $__modifier__.__esModule && $__modifier__ || { default: $__modifier__ };

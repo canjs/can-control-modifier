@@ -39,12 +39,6 @@
     "main": "main",
     "directories": {
       "lib": "src"
-    },
-    "map": {
-      "can/control/modifier/modifier": "can/control/modifier"
-    },
-    "paths": {
-      "can/control/modifier": "src/modifier.js"
     }
   }
 }

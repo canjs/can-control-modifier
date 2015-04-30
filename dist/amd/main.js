@@ -1,4 +1,4 @@
-/*can-control-modifier@0.0.1#main*/
+/*can-control-modifier@0.0.3#main*/
 define([
     './modifier',
     './key/key'

@@ -1,4 +1,4 @@
-/*can-control-modifier@0.0.1#modifier*/
+/*can-control-modifier@0.0.3#modifier*/
 'use strict';
 Object.defineProperties(module.exports, {
     default: {
@@ -8,12 +8,11 @@ Object.defineProperties(module.exports, {
     },
     __esModule: { value: true }
 });
-var $__can__, $__can_47_util_47_util__, $__can_47_control_47_control__, $__can_47_util_47_function_47_function__;
+var $__can__;
 var can = ($__can__ = require('can'), $__can__ && $__can__.__esModule && $__can__ || { default: $__can__ }).default;
-$__can_47_util_47_util__ = require('can/util/util'), $__can_47_util_47_util__ && $__can_47_util_47_util__.__esModule && $__can_47_util_47_util__ || { default: $__can_47_util_47_util__ };
-$__can_47_control_47_control__ = require('can/control/control'), $__can_47_control_47_control__ && $__can_47_control_47_control__.__esModule && $__can_47_control_47_control__ || { default: $__can_47_control_47_control__ };
-$__can_47_util_47_function_47_function__ = require('can/util/function/function'), $__can_47_util_47_function_47_function__ && $__can_47_util_47_function_47_function__.__esModule && $__can_47_util_47_function_47_function__ || { default: $__can_47_util_47_function_47_function__ };
-var originalSetup = can.Control.setup, processors = can.Control.processors, modifier = {
+var originalSetup = can.Control.setup;
+var processors = can.Control.processors;
+var modifier = {
         delim: ':',
         hasModifier: function (name) {
             return name.indexOf(modifier.delim) !== -1;
