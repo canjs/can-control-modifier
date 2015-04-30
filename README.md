@@ -8,6 +8,7 @@ The can-control-modifier plugin, allows you to augment methods and event callbac
 ```javascript
 var can = require('can');
 require('can-control-modifier'); // augments can.Control
+require('can-util-function'); // augments can itself
 
 var MyControl = can.Control.extend({
 

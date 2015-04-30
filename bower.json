@@ -13,7 +13,7 @@
     "can-plugin"
   ],
   "dependencies": {
-    "can": "^2.2.4"
+    "canjs": "^2.2.4"
   },
   "license": "MIT",
   "homepage": "https://github.com/canjs/can-control-modifier",
