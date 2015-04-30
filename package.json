@@ -1,6 +1,6 @@
 {
   "name": "can-control-modifier",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "can/control/modifier plugin for canjs",
   "main": "dist/cjs/modifier.js",
   "scripts": {
