@@ -1,4 +1,4 @@
-/*can-control-modifier@0.0.3#modifier*/
+/*can-control-modifier@0.0.5#modifier*/
 'use strict';
 Object.defineProperties(module.exports, {
     default: {

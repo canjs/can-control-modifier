@@ -60,7 +60,7 @@
 		orig: global.System
 	};
 })({},window)
-/*can-control-modifier@0.0.3#modifier*/
+/*can-control-modifier@0.0.5#modifier*/
 define('can-control-modifier/modifier', ['can'], function ($__0) {
     'use strict';
     if (!$__0 || !$__0.__esModule)
@@ -136,7 +136,7 @@ define('can-control-modifier/modifier', ['can'], function ($__0) {
         __esModule: true
     };
 });
-/*can-control-modifier@0.0.3#key/key*/
+/*can-control-modifier@0.0.5#key/key*/
 define('can-control-modifier/key/key', [
     'can',
     'can-control-modifier/modifier'
@@ -401,7 +401,7 @@ define('can-control-modifier/key/key', [
     });
     return {};
 });
-/*can-control-modifier@0.0.3#main*/
+/*can-control-modifier@0.0.5#main*/
 define('can-control-modifier', [
     'can-control-modifier/modifier',
     'can-control-modifier/key/key'

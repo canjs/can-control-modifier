@@ -1,4 +1,4 @@
-/*can-control-modifier@0.0.3#key/key*/
+/*can-control-modifier@0.0.5#key/key*/
 'use strict';
 var $__can__, $___46__46__47_modifier__;
 var can = ($__can__ = require('can'), $__can__ && $__can__.__esModule && $__can__ || { default: $__can__ }).default;

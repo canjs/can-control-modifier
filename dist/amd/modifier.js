@@ -1,4 +1,4 @@
-/*can-control-modifier@0.0.3#modifier*/
+/*can-control-modifier@0.0.5#modifier*/
 define(['can'], function ($__0) {
     'use strict';
     if (!$__0 || !$__0.__esModule)
