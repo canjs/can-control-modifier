@@ -2,6 +2,7 @@ steal(
     'steal-qunit',
     'can',
     'can/control/modifier',
+    'can/util/function',
 
     function(QUnit, can) {
 

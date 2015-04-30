@@ -1,7 +1,4 @@
 import can from 'can';
-import 'can/util/util';
-import 'can/control/control';
-import 'can/util/function/function';
 
 // Hang on to original action
 var originalSetup = can.Control.setup;

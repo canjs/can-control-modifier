@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<title>key</title>
+		<title>Key</title>
         <style type='text/css'>
             body {font-family: verdana}
             .error {border: solid 1px red;}
@@ -10,30 +10,29 @@
         </style>
 	</head>
 	<body>
-	    <h1>key Demo</h1>
+	    <h1>Key Demo</h1>
 		<p class="status">NOT!</p>
+		<p><em>Try pressing <code>p</code> or <code>shift+p</code></em></p>
 		
-		<script type='text/javascript' src='../../../../steal/steal.js'></script>
+		<script src="../node_modules/steal/steal.js">
+		import can from 'can';
+		import 'can/control/modifier/key/key';
 
-		<script type='text/javascript'>
-			steal('jquery','can/control','can/control/modifier/key', function($, Control){
-				
-				var Tester = can.Control({
-					"keydown":function(elm,ev){
-						can.$('.status').text('Found normal!')
-					},
+		var Tester = can.Control({
+			"keydown":function(elm, ev){
+				can.$('.status').text('Found normal!');
+			},
 
-					"keydown:(p)":function(elm,ev){
-						can.$('.status').text('Found jwerty (p)!')
-					},
+			"keydown:(p)":function(elm, ev){
+				can.$('.status').text('Found jwerty (p)!');
+			},
 
-					"keydown:(shift+p)":function(elm,ev){
-						can.$('.status').text('Found jwerty (shift+p)!')
-					}
-				});
+			"keydown:(shift+p)":function(elm, ev){
+				can.$('.status').text('Found jwerty (shift+p)!');
+			}
+		});
 
-				new Tester(document.body);			
-			});
+		var tester = new Tester(document.body);	
 		</script>
 	</body>
 </html>
