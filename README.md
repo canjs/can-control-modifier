@@ -1,5 +1,7 @@
 # can-control-modifier
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/canjs/can-control-modifier.svg)](https://greenkeeper.io/)
+
 _\*This plugin is experimental and not **official** or **supported**\*_
 
 
