@@ -1,63 +1,28 @@
 # can-control-modifier
 
-_\*This plugin is experimental and not **official** or **supported**\*_
-
+[![Join the chat at https://gitter.im/canjs/canjs](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/canjs/canjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/canjs/can-control-modifier/blob/master/LICENSE)
+[![npm version](https://badge.fury.io/js/can-control-modifier.svg)](https://www.npmjs.com/package/can-control-modifier)
+[![Travis build status](https://travis-ci.org/canjs/can-control-modifier.svg?branch=master)](https://travis-ci.org/canjs/can-control-modifier)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/canjs/can-control-modifier?branch=master&svg=true)](https://ci.appveyor.com/project/matthewp/can-control-modifier)
+[![Coverage status](https://coveralls.io/repos/github/canjs/can-control-modifier/badge.svg?branch=master)](https://coveralls.io/github/canjs/can-control-modifier?branch=master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/canjs/can-control-modifier.svg)](https://greenkeeper.io/)
 
 The can-control-modifier plugin, allows you to augment methods and event callbacks declaritivly. This is most commonly used in conjunction with the [can-util-function plugin](https://github.com/canjs/can-util-function) to debounce, throttle and defer method or event callbacks:
 
-```javascript
-var can = require('can');
-require('can-control-modifier'); // augments can.Control
-require('can-util-function'); // augments can itself
+## Documentation
 
-var MyControl = can.Control.extend({
+Read the [API docs on CanJS.com](https://canjs.com/doc/can-control-modifier.html).
 
-}, {
-    'search:debounce(100)': function(searchTerm) {
-        applySearch(searchTerm);
-    },
-    'button click:throttle(30)': function(el, ev) {
-        selectElement(el);
-    }
-});
-```
+## Changelog
 
-...but can also be used in clever ways like the modifier/key plugin (packaged with this plugin) which allows you to easily bind keyboard events to your controls in a nice easy to read way:
+See the [latest releases on GitHub](https://github.com/canjs/can-control-modifier/releases).
 
-```javascript
-var KeyboardControl = can.Control.extend({
-    'keyup:(arrow-up)': function (el, ev) {
-        moveUp();
-    },
-    'keydown:(shift+p)': function (el, ev) {
-        log('shift key and p: event pressed!');
-    }
-});
-```
+## Contributing
 
-## API
+The [contribution guide](https://github.com/canjs/can-control-modifier/blob/master/CONTRIBUTING.md) has information on getting help, reporting bugs, developing locally, and more.
 
-After the method name, or event name, add `:` + **the method name** + `({value to pass to the method})`.
+## License
 
-```javascript
-'element eventname:debounce(100)': function() {},
-'method:throttle(50)': function() {},
-
-```
-
-The method name provided will be searched for in the following order:
-
-1. on the **options** object passed into the control on instatiation
-2. on the **can** framework object (which in many cases is augmented by the [can-util-function plugin](https://github.com/canjs/can-util-function) or other plugins)
-3. on the **window** or **global** object
-
-So you can either pass the method in with the options, provide it in defaults, extend **can** itself, or have the method globally available.
-
--------------------
-
-
-Licensing
----------
-
-  MIT - Please see the file called LICENSE.
+[MIT](https://github.com/canjs/can-control-modifier/blob/master/LICENSE.md)
 
